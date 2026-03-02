@@ -1,12 +1,14 @@
 [
   {
-    "id": 1772475026421,
+    "id": 1772476933949,
     "type": "long-term",
-    "title": "1",
-    "target": "全体",
-    "content": "1",
-    "publishTime": "2026-03-02T18:10:26.421Z",
-    "deadline": "2026-03-01T00:00",
-    "images": []
+    "title": "新学期电子注册",
+    "target": "",
+    "content": "请同学们尽快完成新学期的电子信息注册！\n网址：http://xgyth.ustc.edu.cn",
+    "publishTime": "2026-03-02T18:42:13.950Z",
+    "deadline": "2026-03-15T23:59",
+    "images": [
+      "images/新学期电子注册.jpg"
+    ]
   }
 ]
