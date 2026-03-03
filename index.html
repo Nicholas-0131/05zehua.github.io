@@ -31,8 +31,7 @@
             z-index: 9999;
             pointer-events: none;
             opacity: 0;
-            animation: welcomeSequence 1.8s forwards;
-            /* 缩短到1.8s */
+            animation: welcomeSequence 1.0s forwards;
         }
 
         @keyframes welcomeSequence {
@@ -110,7 +109,8 @@
             }
 
             #welcome-text {
-                font-size: 2.5em;
+                font-size: clamp(1.8em, 8vw, 2.2em);
+                /* 最小1.8em，根据视口缩放，最大2.2em */
             }
 
             body {
@@ -139,6 +139,11 @@
         .urgent {
             border: 2px solid #dc3545;
             background: #fff5f5;
+        }
+
+        .normal {
+            border: 2px solid #007bff;
+            background: #f0f7ff;
         }
 
         .urgent .deadline {
@@ -240,10 +245,10 @@
     <div id="welcome-text">25级少院5班通知中心</div>
 
     <div id="main-content">
-        <h2 class="module-title">长期通知</h2>
+        <h2 class="module-title">通知</h2>
         <div id="long-term-container">加载中...</div>
 
-        <h2 class="module-title">即时通知</h2>
+        <h2 class="module-title">活动通知</h2>
         <div id="instant-container">加载中...</div>
     </div>
 
@@ -284,6 +289,9 @@
 
                 if (!n.deadline) {
                     timeText = '长期有效';
+                } else if (n.deadline === 'TBD') {
+                    timeText = '时间待定';
+                    if (n.isUrgent) status = 'urgent';
                 } else {
                     deadlineTime = new Date(n.deadline);
                     diffMs = deadlineTime - now;
@@ -294,6 +302,10 @@
                         status = 'expired';
                         timeText = `已过期 · ${Math.floor(Math.abs(diffHours))}小时`;
                     } else {
+                        // 三天内变红
+                        if (diffMs < 3 * 24 * 60 * 60 * 1000) {
+                            status = 'urgent';
+                        }
                         const d = Math.floor(diffMs / (1000 * 60 * 60 * 24));
                         const h = Math.floor((diffMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                         const m = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
@@ -310,10 +322,6 @@
                 return b.deadlineTime - a.deadlineTime;
             });
 
-            ['long-term', 'instant'].forEach(type => {
-                const idx = activeNotifs.findIndex(n => n.type === type && n.status !== 'expired');
-                if (idx !== -1) activeNotifs[idx].status = 'urgent';
-            });
 
             document.getElementById('long-term-container').innerHTML = '';
             document.getElementById('instant-container').innerHTML = '';
