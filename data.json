@@ -22,14 +22,52 @@
     "images": []
   },
   {
-    "id": 1772546600257,
+    "id": 1772685473692,
     "type": "long-term",
-    "title": "团员大会准备",
-    "target": "全体团员",
-    "content": "本周内会择时间召开班会与团员大会。其中团员大会需要每位团员进行批评与自我批评，请提前准备，不做时长/字数要求，务实为主；同时会进行团员的民主评议，每位团员对支部其他团员进行评价，评议为优是申请优秀团员/团干的前置条件。",
-    "publishTime": "2026-03-03T14:03:20.257Z",
-    "deadline": "TBD",
-    "isUrgent": true,
+    "title": "班会和团员大会",
+    "target": "",
+    "location": "1102",
+    "content": "暂定内容：\n1、班会及主题教育（全班）\n2、团章团纪主题学习（全班）\n3、组织生活会（全体团员及感兴趣的非团员）\n*所有团员需依次发言，注意言简意赅\n4、民主评议（全体团员）\n5、重温入团誓词（全体团员）\n6、二十届四中全会精神主题学习（全体团员）\n注：\n评议的4个等级：优秀、合格、基本合格、不合格，其中优秀率不能超过30%",
+    "publishTime": "2026-03-05T04:37:53.692Z",
+    "timeType": "ongoing",
+    "deadline": "",
+    "ongoingStart": "2026-03-06T19:00",
+    "ongoingEnd": "",
+    "isUrgent": false,
+    "images": [
+      "images/0306班会.png"
+    ]
+  },
+  {
+    "id": 1772685969035,
+    "type": "instant",
+    "title": "环太平洋大学联盟（APRU）本科生领袖计划（ULP）",
+    "target": "",
+    "location": "",
+    "content": "“未来已来：人工智能与机器人时代的领导力”，2026 年6月22日至 7月3日，由南方科技大学承办。具体信息见 https://www.apru.org/event/apru-undergraduate-leaders-program-2026/",
+    "publishTime": "2026-03-05T04:46:09.036Z",
+    "timeType": "ongoing",
+    "deadline": "",
+    "ongoingStart": "2026-06-22",
+    "ongoingEnd": "2026-07-03",
+    "isUrgent": false,
     "images": []
+  },
+  {
+    "id": 1772686281625,
+    "type": "instant",
+    "title": "形势与政策报名",
+    "target": "",
+    "location": "",
+    "content": "“形势与政策”是本科生必修课，修读方式为大三之前听课8次，大三时就其中两次课程写2个报告提交。\n详见马克思主义学院官网的通知公告栏目http://marx.ustc.edu.cn/2023/0606/c30320a605104/page.htm",
+    "publishTime": "2026-03-05T04:51:21.625Z",
+    "timeType": "ongoing",
+    "deadline": "",
+    "ongoingStart": "",
+    "ongoingEnd": "",
+    "isUrgent": false,
+    "images": [
+      "images/形式与政策报名.jpg"
+    ]
   }
 ]
